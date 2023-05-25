@@ -3,11 +3,17 @@ import java.sql.SQLOutput;
 public class Main {
 
     public void main(String[] args) {
-        Author georgeMartin = new Author(george,martin);
-        Book iceAndFire = new Book(iceAndFire,georgeMartin,1996)
-        System.out.println(iceAndFire.getBookName(iceAndFire));
-        System.out.println(georgeMartin.getName(georgeMartin));
-        System.out.println(1996.getPublishingYear(1996));
+        Author georgeMartin = new Author("George","Martin");
+        Book iceAndFire = new Book("iceAndFire",georgeMartin,1996);
+        System.out.println(iceAndFire.getBookName());
+        System.out.println(georgeMartin.getName());
+        System.out.println(iceAndFire.getPublishingYear());
+
+        Author andrzejSapkowski = new Author("Andrzej","Sapkowski");
+        Book witcher = new Book("witcher",andrzejSapkowski,2013);
+        System.out.println(witcher.getBookName());
+        System.out.println(andrzejSapkowski.getName());
+        System.out.println(witcher.getPublishingYear());
     }
 
 
