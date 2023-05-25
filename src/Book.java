@@ -1,32 +1,54 @@
 public class Book {
-   private String bookName;
+    private String name;
     private int publishingYear;
-            Author name;
-    public  Book(String bookName, Author name, int publishingYear) {
-        this.bookName = bookName;
-        this.name = name;
+    private Author author1;
+
+    public Book(String bookName, Author author1, int publishingYear) {
+
+        this.name = bookName;
+        this.author1 = author1;
         this.publishingYear = publishingYear;
-        System.out.println("Название книги " + bookName);
-        System.out.println("имя автора " + name);
-        System.out.println("год публикации " + publishingYear);
-        System.out.println(name.equals(bookName));
+        System.out.println(author1.equals(name));
     }
-    public String getBookName(){
-        return  this.bookName;
-    }
-    public Author getName(){
+
+    public String getName() {
+
         return this.name;
     }
+
+    public Author getauthor() {
+
+        return this.author1;
+    }
+
     public int getPublishingYear() {
+
         return this.publishingYear;
     }
-    public void setPublishingYear(){
-        this.publishingYear = 1999 ;
+
+    public void setPublishingYear(int year) {
+
+        this.publishingYear = year;
     }
-    public String toString(){
-        return "название книги " + this.bookName + "имя автора " + this.name + " год издания " + this.publishingYear;
+
+    public String toString() {
+
+        return "название книги " + this.name + "имя автора " + this.author1.toString() + " год издания " + this.publishingYear;
     }
-    public int hashCode () {
-        return java.util.Objects.hash(name,bookName,publishingYear);
+
+    public int hashCode() {
+
+        return java.util.Objects.hash(author1, name, publishingYear);
+    }
+
+    public boolean equals(Object Book) {
+
+        if (this.name == Book)
+
+            return true;
+        if (name == null || getClass() != Book.getClass())
+
+            return false;
+        return false;
     }
 }

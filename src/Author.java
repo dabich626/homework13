@@ -1,24 +1,33 @@
 public class Author {
-    private String name;
-     private String secondName;
+    private String name1;
+    private String secondName;
 
-    public  Author(String name, String secondName){
-        this.name = name;
+    public Author(String name1, String secondName) {
+
+        this.name1 = name1;
         this.secondName = secondName;
-        System.out.println("имя автора " + this.name + " фамилия автора " + this.secondName);
-        System.out.println(name.equals(secondName));
+        System.out.println(name1.equals(secondName));
 
     }
-    public String getName(){
-        return this.name;
+
+    public String getName1() {
+
+        return this.name1;
     }
-    public String getSecondName(){
-        return this.secondName ;
+
+    public String getSecondName() {
+
+        return this.secondName;
     }
-    public String toString(){
-        return "имя " + this.name + " фамилия " + this.secondName;
+
+    public String toString() {
+
+        return "имя " + this.name1 + " фамилия " + this.secondName;
     }
-    public int hashCode () {
-        return java.util.Objects.hash(name,secondName);
+
+    public int hashCode() {
+
+        return java.util.Objects.hash(name1, secondName);
     }
+
 }
