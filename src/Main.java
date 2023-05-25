@@ -2,7 +2,7 @@ import java.sql.SQLOutput;
 
 public class Main {
 
-    public void main(String[] args) {
+    public void main(String[ ] args) {
 
         Author georgeMartin = new Author("George", "Martin");
         Book iceAndFire = new Book("iceAndFire", georgeMartin, 1996);

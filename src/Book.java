@@ -31,7 +31,7 @@ public class Book {
         this.publishingYear = year;
     }
 
-    public String toString() {
+    public String toString( ) {
 
         return "название книги " + this.name + "имя автора " + this.author1.toString() + " год издания " + this.publishingYear;
     }
