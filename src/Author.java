@@ -13,7 +13,7 @@ public class Author {
         return this.name;
     }
     public String getSecondName(){
-        return this.secondName;
+        return this.secondName ;
     }
     public String toString(){
         return "имя " + this.name + " фамилия " + this.secondName;

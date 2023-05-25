@@ -15,7 +15,7 @@ public class Main {
         System.out.println(andrzejSapkowski.getName());
         System.out.println(witcher.getPublishingYear());
 
-        System.out.println(witcher.equals(iceAndFire));
+        System.out.println(witcher.equals(iceAndFire)) ;
 
     }
 
