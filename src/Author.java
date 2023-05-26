@@ -2,9 +2,9 @@ public class Author {
     private String name;
     private String secondName;
 
-    public Author(String name1, String secondName) {
+    public Author(String name, String secondName) {
 
-        this.name = name1;
+        this.name = name;
         this.secondName = secondName;
 
     }
