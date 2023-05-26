@@ -29,10 +29,14 @@ public class Author {
         return java.util.Objects.hash(name, secondName);
     }
     public boolean equals(Object Author){
-        if (this.name == Author && this.secondName == Author) {
 
-            return true;}
-        if (name == null || getClass() != Author.getClass()) {
+        Author author = (Author) Author;
+
+        if (this.name.equals(getName()) && this.secondName.equals(getSecondName())) {
+
+            return true;
+
+        } else if (name == null || getClass() != Author.getClass()) {
 
             return false;
         }

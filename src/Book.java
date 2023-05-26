@@ -41,11 +41,13 @@ public class Book {
     }
 
     public boolean equals(Object Book) {
+        Book book = (Book) Book;
 
-        if (this.name == Book && this.author == Book && this.publishingYear == publishingYear) {
+        if (this.name.equals(book.getName()) && this.author.equals(book.getauthor()) && this.publishingYear == book.getPublishingYear()) {
 
-            return true;}
-        if (name == null || getClass() != Book.getClass()) {
+            return true;
+
+        } else  if (name == null || getClass() != Book.getClass()) {
 
             return false;
         }

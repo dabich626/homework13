@@ -13,7 +13,6 @@ public class Main {
         System.out.println(witcher.toString());
 
         System.out.println(witcher.equals(iceAndFire));
-
     }
 
 
