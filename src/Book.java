@@ -1,14 +1,13 @@
 public class Book {
     private String name;
     private int publishingYear;
-    private Author author1;
+    private Author author;
 
     public Book(String bookName, Author author1, int publishingYear) {
 
         this.name = bookName;
-        this.author1 = author1;
+        this.author = author1;
         this.publishingYear = publishingYear;
-        System.out.println(author1.equals(name));
     }
 
     public String getName() {
@@ -18,7 +17,7 @@ public class Book {
 
     public Author getauthor() {
 
-        return this.author1;
+        return this.author;
     }
 
     public int getPublishingYear() {
@@ -33,22 +32,23 @@ public class Book {
 
     public String toString() {
 
-        return "название книги " + this.name + "имя автора " + this.author1.toString() + " год издания " + this.publishingYear;
+        return "название книги " + this.name + "имя автора " + this.author.toString() + " год издания " + this.publishingYear;
     }
 
     public int hashCode() {
 
-        return java.util.Objects.hash(author1, name, publishingYear);
+        return java.util.Objects.hash(author, name, publishingYear);
     }
 
     public boolean equals(Object Book) {
 
-        if (this.name == Book)
+        if (this.name == Book && this.author == Book && this.publishingYear == publishingYear) {
 
-            return true;
-        if (name == null || getClass() != Book.getClass())
+            return true;}
+        if (name == null || getClass() != Book.getClass()) {
 
             return false;
+        }
         return false;
     }
 }

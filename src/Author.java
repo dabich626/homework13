@@ -1,18 +1,17 @@
 public class Author {
-    private String name1;
+    private String name;
     private String secondName;
 
     public Author(String name1, String secondName) {
 
-        this.name1 = name1;
+        this.name = name1;
         this.secondName = secondName;
-        System.out.println(name1.equals(secondName));
 
     }
 
-    public String getName1() {
+    public String getName() {
 
-        return this.name1;
+        return this.name;
     }
 
     public String getSecondName() {
@@ -22,12 +21,22 @@ public class Author {
 
     public String toString() {
 
-        return "имя " + this.name1 + " фамилия " + this.secondName;
+        return "имя " + this.name + " фамилия " + this.secondName;
     }
 
     public int hashCode() {
 
-        return java.util.Objects.hash(name1, secondName);
+        return java.util.Objects.hash(name, secondName);
+    }
+    public boolean equals(Object Author){
+        if (this.name == Author && this.secondName == Author) {
+
+            return true;}
+        if (name == null || getClass() != Author.getClass()) {
+
+            return false;
+        }
+        return false;
     }
 
 }
